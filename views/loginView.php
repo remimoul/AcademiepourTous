@@ -39,7 +39,7 @@ require('header.html');
 <!--    </div>-->
 <!--</section>-->
 
-<section class="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
+<section class="gradient-form h-full bg-neutral-200">
     <div class="container h-full p-10">
         <div
             class="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
