@@ -139,7 +139,7 @@ require('views/header.html');
 
 </section>
 
-<section class="text-white/80 text-center w-1/2 mx-[25%]">
+<section class="text-black text-center w-1/2 mx-[25%]">
 
     <h2 class="my-4 text-red-400 text-3xl font-bold">DECOUVREZ L'ACADEMIE POUR TOUS</h2>
 
