@@ -1,0 +1,28 @@
+.navbar{
+
+    background: linear-gradient(90deg, rgba(185,136,0,1) 0%, rgba(253,29,29,1) 50%, rgba(47,43,36,1) 100%);
+
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+    }
+    .hidden {
+      display: none;
+    }
+
+
+    
+  }
+
+  @media (max-width: 768px) {
+    .navbar-menu-toggle {
+      display: block;
+    }
+  }
+
+.carousel-item.hidden {
+    display: none;
+}
+
