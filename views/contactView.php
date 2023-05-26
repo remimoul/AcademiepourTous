@@ -60,3 +60,7 @@ require ('header.html');
 </section>
 
 </body>
+
+<?php
+require ('footer.html');
+?>
