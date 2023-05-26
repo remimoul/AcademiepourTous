@@ -8,7 +8,7 @@ require ('header.html');
 <section class="flex flex-wrap my-16 justify-center">
 
 <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg my-8">
-    <img class="w-full" src="assets/image/flower.webp" alt="Sunset in the mountains">
+    <img class="w-full" src="assets/image/flower.webp" alt="Aide aux devoirs?">
     <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">Aide aux devoirs</div>
         <p class="text-gray-700 text-base">
@@ -27,7 +27,7 @@ require ('header.html');
 </div>
 
 <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg my-8">
-    <img class="w-full" src="assets/image/bird1.webp" alt="Sunset in the mountains">
+    <img class="w-full" src="assets/image/bird1.webp" alt="Mathématiques?">
     <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">Mathématiques</div>
         <p class="text-gray-700 text-base">
@@ -45,7 +45,7 @@ require ('header.html');
 </div>
 
 <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg my-8">
-    <img class="w-full" src="assets/image/bird2.webp" alt="Sunset in the mountains">
+    <img class="w-full" src="assets/image/bird2.webp" alt="Physique-Chimie?">
     <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">Physique-Chimie</div>
         <p class="text-gray-700 text-base">
@@ -65,7 +65,7 @@ require ('header.html');
 
 
 <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg my-8">
-    <img class="w-full" src="assets/image/panther.webp" alt="Sunset in the mountains">
+    <img class="w-full" src="assets/image/panther.webp" alt="Français?">
     <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">Français</div>
         <p class="text-gray-700 text-base">
@@ -84,7 +84,7 @@ require ('header.html');
 </div>
 
 <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg my-8">
-    <img class="w-full" src="assets/image/nature.jpg" alt="Sunset in the mountains">
+    <img class="w-full" src="assets/image/nature.jpg" alt="Anglais?">
     <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">Anglais</div>
         <p class="text-gray-700 text-base">
@@ -103,7 +103,7 @@ require ('header.html');
 </div>
 
 <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg my-8">
-    <img class="w-full" src="assets/image/cat.jpg" alt="Sunset in the mountains">
+    <img class="w-full" src="assets/image/cat.jpg" alt="Economie?">
     <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">Economie</div>
         <p class="text-gray-700 text-base">
