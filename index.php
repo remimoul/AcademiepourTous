@@ -174,9 +174,9 @@ require('views/header.html');
         </div>
         <img src="assets/image/three.webp" alt="Image 1" />
         <div class="absolute bottom-0 flex justify-center left-0 right-0 p-4">
-            <button class="bg-red-700 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+            <a href="./views/stageView.php" class="bg-red-700 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                 En savoir plus
-            </button>
+            </a>
         </div>
     </div>
     <div class="relative">
@@ -185,9 +185,9 @@ require('views/header.html');
         </div>
         <img src="assets/image/four.webp" alt="Image 2" />
         <div class="absolute bottom-0 flex justify-center left-0 right-0 p-4">
-            <button class="bg-red-700 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+            <a href="./views/coursView.php" class="bg-red-700 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                 S'inscrire
-            </button>
+            </a>
         </div>
     </div>
 </div>

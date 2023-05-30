@@ -18,9 +18,10 @@ require('header.html');
 
 </style>
 
-<section class="bg-local bg-cover bg-center h-full font-myfontcustom" style="background-image: url('assets/image/tableau.jpg')">
+<!--<section class="bg-local bg-cover bg-center h-full font-myfontcustom" style="background-image: url('assets/image/tableau.jpg')">-->
+<section class="bg-local bg-cover bg-center h-full">
 
-    <div class="flex h-full text-white">
+    <div class="flex h-full text-black">
         <div class="my-12">
             <h1 class="text-6xl font-bold text-center">PRESENTATION</h1>
             <h2 class="text-4xl mx-10 font-bold">Qui sommes-nous ?</h2>

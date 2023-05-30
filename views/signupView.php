@@ -105,3 +105,9 @@ require('header.html');
         </div>
     </div>
 </section>
+
+<?php
+
+require('footer.html');
+
+?>
