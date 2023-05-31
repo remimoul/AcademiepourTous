@@ -24,21 +24,36 @@ require('header.html');
                                     </h4>
                                 </div>
 
-                                <form>
+                                <form method="post" action="controllers/signupController.php/addOneUsers">
                                     <p class="mb-4">Veuillez remplir le formulaire d'inscription</p>
 
                                     <!--Username input-->
 
                                     <div class="relative mb-4" data-te-input-wrapper-init>
                                         <input
+                                                name="nom"
                                                 type="text"
                                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                                id="exampleFormControlInput1"
-                                                placeholder="username" />
+                                                id="username1"
+                                                placeholder="Votre Nom" />
                                         <label
-                                                for="username"
+                                                for="username1"
                                                 class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                                        >Pseudo
+                                        >Nom
+                                        </label>
+                                    </div>
+
+                                    <div class="relative mb-4" data-te-input-wrapper-init>
+                                        <input
+                                                name="prenom"
+                                                type="text"
+                                                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                                id="username2"
+                                                placeholder="Votre Prenom" />
+                                        <label
+                                                for="username2"
+                                                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                                        >Prénom
                                         </label>
                                     </div>
 
@@ -48,9 +63,10 @@ require('header.html');
                                     <!--Email input-->
                                     <div class="relative mb-4" data-te-input-wrapper-init>
                                         <input
+                                                name="email"
                                             type="text"
                                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                            id="exampleFormControlInput1"
+                                            id="Email1"
                                             placeholder="Email" />
                                         <label
                                             for="email1"
@@ -64,12 +80,12 @@ require('header.html');
                                         <input
                                                 type="text"
                                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                                id="exampleFormControlInput1"
+                                                id="Email2"
                                                 placeholder="Confirm Email" />
                                         <label
                                                 for="email2"
                                                 class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                                        >Confirm Email
+                                        >Confirmer votre Email
                                         </label>
                                     </div>
 
@@ -77,12 +93,13 @@ require('header.html');
                                     <!--Password input-->
                                     <div class="relative mb-4" data-te-input-wrapper-init>
                                         <input
+                                                name="password"
                                             type="password"
                                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                            id="exampleFormControlInput11"
+                                            id="password1"
                                             placeholder="Password" />
                                         <label
-                                            for="exampleFormControlInput11"
+                                            for="password1"
                                             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                                         >Mot de passe
                                         </label>
@@ -105,12 +122,11 @@ require('header.html');
                                     <div class="mb-12 pb-1 pt-1 text-center">
                                         <button
                                             class="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
-                                            type="button"
+                                            type="submit"
                                             data-te-ripple-init
                                             data-te-ripple-color="light"
-                                            style="
-                        background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
-                      ">
+                                            name="saveUser"
+                                            style="background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);">
                                             S'inscrire
                                         </button>
 
