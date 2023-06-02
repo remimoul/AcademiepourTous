@@ -121,11 +121,10 @@ require ('header.html');
 </div>
 
 </section>
-</body>
 
 <?php
 
 require ('footer.html');
 ?>
 
-</html>
+
