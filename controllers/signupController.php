@@ -23,17 +23,17 @@ function addOneUsers(){
         {
             if (!filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL)){
 
-                echo "Entrez une adresse email valide";
+                echo "<script>alert('Entrez une adresse email valide')</script>";
             }elseif ($_POST['password'] != $_POST['password2']){
-                echo "Les mots de passe ne correspondent pas";
+                echo "<script>alert('Les mots de passe ne correspondent pas')</script>";
             }elseif ($_POST['mail'] != $_POST['mail2']){
-                echo "L'adresse mail ne correspond pas";
+                echo "<script>alert('Ladresse mail ne correspond pas') </script> ";
             }
             else{
                 $data = getUserWithMail($_POST['mail']);
 
                 if ($data){
-                    echo "Un compte existe déja avec cette adresse mail";
+                    echo "<script>alert('Un compte existe déja avec cette adresse mail')</script> ";
                 }else{
                     $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
                     addNewUsers($_POST['nom'],$_POST['prenom'],$_POST['mail'],$password);
@@ -48,3 +48,4 @@ function addOneUsers(){
     require_once ('views/signupView.php');
 
 }
+//pt-[30rem] mx-[22%] z-[999] absolute
