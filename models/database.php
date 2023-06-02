@@ -22,8 +22,3 @@ function connexionBDD(){
 return $db;
 
 }
-
-connexionBDD();
-if(connexionBDD()){
-    echo "connexion ok";
-}

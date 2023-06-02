@@ -43,8 +43,6 @@ function addOneUsers(){
 
         }
 
-    }else{
-        echo "Tous les champs sont requis";
     }
 
     require_once ('views/signupView.php');
