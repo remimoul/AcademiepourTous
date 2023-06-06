@@ -1,5 +1,5 @@
 <?php
-require_once("views/header.html");
+require_once("header.php");
 
 ?>
 
@@ -8,5 +8,5 @@ require_once("views/header.html");
 
 
 <?php
-require_once ('views/footer.html');
+require_once ('footer.html');
 ?>

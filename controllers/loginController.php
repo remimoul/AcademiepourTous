@@ -42,9 +42,12 @@ function disconnect(){
     if (isset($_SESSION['usersId'])){
         session_unset();
         session_destroy();
-        echo "Vous etes bien déconnectés";
+        echo "<script>alert('Vous etes bien déconnectés') </script> ";
+
     }else{
-        echo "Vous n'est pas connectés";
+        echo "<script>alert('Vous etes pas connecté') </script> ";
+
     }
 
+    require_once('views/accueilView.php');
 }

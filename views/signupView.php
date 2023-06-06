@@ -1,5 +1,5 @@
 <?php
-require('header.html');
+require('header.php');
 ?>
 
     <section class="gradient-form h-full bg-neutral-200 flex items-center justify-center min-h-[512px]">

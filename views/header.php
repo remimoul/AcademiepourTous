@@ -1,3 +1,6 @@
+<?php session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +12,9 @@
 
     <!--    <link rel="stylesheet" href="./node_modules/tw-elements/dist/css/tw-elements.min.css">-->
     <script defer src="./node_modules/tw-elements/dist/js/tw-elements.umd.min.js">
-        <script defer src="assets/js/script.js"></script>
+        // <script defer src="assets/js/script.js">
+
+    </script>
     <title>Accueil - L'academie pour tous</title>
 </head>
 
@@ -45,12 +50,46 @@
                     <li>
                         <a href="./views/contactView.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
                     </li>
+
+                    <?php if (!isset($_SESSION['usersId'])) { ?>
+
                     <li>
                         <a href="signupController/addOneUsers" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">Inscription</a>
                     </li>
+
+                    <?php } else { ?>
                     <li>
-                        <a href="./views/loginView.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-green-700 dark:hover:text-white md:dark:hover:bg-transparent">Connexion</a>
+                        <a href="./views/myaccountView.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-green-700 dark:hover:text-white md:dark:hover:bg-transparent">Mon Compte</a>
                     </li>
+
+                    <?php } ?>
+
+                    <?php if (isset($_SESSION['usersId'])) { ?>
+
+                    <li>
+                        <a href="loginController/disconnect" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-green-700 dark:hover:text-white md:dark:hover:bg-transparent">Déconnexion</a>
+                    </li>
+                    <?php } else { ?>
+                    <li>
+                        <a href="loginController/connexion" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-green-700 dark:hover:text-white md:dark:hover:bg-transparent">Connexion</a>
+                    </li>
+                    <?php } ?>
+
+
+                    <?php if (isset($_SESSION['usersId'])) {
+                        $bddPDO = new mysqli("localhost", "root", "", "academie");
+                    $user_id = $_SESSION['usersId'];
+                    $requete = "SELECT * FROM users WHERE usersId = $user_id AND admin = 1";
+                    $result = $bddPDO->query($requete);
+
+                    if ($result->num_rows > 0) {
+                    // L'utilisateur est un administrateur, afficher le bouton "Admin"
+                    echo '<li><a href="./views/adminView.php" class="rounded bg-green-700 text-white">ADMIN</a></li>';
+                    }
+                    }
+                    ?>
+
+
                 </ul>
             </div>
         </div>
@@ -64,11 +103,7 @@
         menu.classList.toggle("hidden");
     }
 
-    var menuToggle = document.querySelector('.navbar-menu-toggle');
+    let menuToggle = document.querySelector('.navbar-menu-toggle');
     menuToggle.addEventListener('click', toggleMenu);
 
 </script>
-
-
-
-

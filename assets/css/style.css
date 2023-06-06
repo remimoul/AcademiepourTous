@@ -5,7 +5,9 @@
 
 
 
+
 @media (max-width: 768px) {
+
     .navbar-menu {
       display: none;
     }
@@ -13,13 +15,12 @@
       display: none;
     }
 
-
-    
   }
 
   @media (max-width: 768px) {
-    .navbar-menu-toggle {
+      .navbar-menu-toggle {
       display: block;
+
     }
   }
 
@@ -38,4 +39,12 @@
     box-sizing: border-box;
 }
 
+
+@media (max-width: 768px){
+
+    .test {
+        width: auto;
+    }
+
+}
 

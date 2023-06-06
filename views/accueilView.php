@@ -1,6 +1,6 @@
 <?php
 
-require('views/header.html');
+require('views/header.php');
 
 
 ?>
