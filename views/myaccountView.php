@@ -1,7 +1,9 @@
 <?php
 require('header.php');
 require ('../models/oneUsersViewModel.php');
-foreach ($users as $row){
+
+
+foreach ($users as $row) {
     ?>
 
         <h1 class="text-6xl font-bold text-center my-12">Bienvenue <?php echo $row['prenom'] ?> </h1>
@@ -18,7 +20,7 @@ foreach ($users as $row){
                <?php echo $row['nom'] ?>
             </td>
 
-        </tr>"
+        </tr>
 
 
 
@@ -56,6 +58,9 @@ foreach ($users as $row){
 
 </div>
 
-    <?php }?>
 
 
+<?php } ?>
+
+
+<?php require('footer.html');

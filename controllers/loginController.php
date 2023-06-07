@@ -21,9 +21,15 @@ function connexion(){
             $_SESSION['mail']=$data['mail'];
             $_SESSION['password']=$data['password'];
 
-            $resultGetCourses = getCourses();
-            $nb_courses = $resultGetCourses -> rowCount();
-            require_once('views/profilView.php');
+//            $resultGetCourses = getCourses();
+//            $nb_courses = $resultGetCourses -> rowCount();
+//            require_once('views/profilView.php');
+
+            // Rediriger l'utilisateur vers la page d'accueil
+            header('Location: ../views/accueilView.php');
+            exit;
+
+
         }else{
             echo "Veuillez rentrer un mot de passe valide";
         }

@@ -1,6 +1,6 @@
 <?php
 
-require('views/header.php');
+require('header.php');
 
 
 ?>
@@ -196,7 +196,7 @@ require('views/header.php');
 <br><br><br>
 <?php
 
-require('views/footer.html');
+require('footer.html');
 
 
 ?>
