@@ -1,26 +1,9 @@
 <?php
 require('header.php');
-?>
-
-
-
-
-<?php
-
-require('../models/database.php');
-
-if (isset($_SESSION['usersId'])){
-    $bddPDO = connexionBDD();
-$userid = $_SESSION['usersId'];
-$requete = "SELECT nom,prenom,mail FROM users WHERE usersId = $userid";
-    $result = $bddPDO->query($requete);
-
-    $users = $result->fetchAll(PDO::FETCH_ASSOC);
-
-    foreach ($users as $row){
-
-
+require ('../models/oneUsersViewModel.php');
+foreach ($users as $row){
     ?>
+
         <h1 class="text-6xl font-bold text-center my-12">Bienvenue <?php echo $row['prenom'] ?> </h1>
 
 <div class='shadow-md sm:rounded-lg w-1/2'>
@@ -75,4 +58,4 @@ $requete = "SELECT nom,prenom,mail FROM users WHERE usersId = $userid";
 
     <?php }?>
 
-<?php }?>
+
