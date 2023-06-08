@@ -4,10 +4,10 @@
 if (isset($_SESSION['usersId'])) {
     $bddPDO = connexionBDD();
     $userid = $_SESSION['usersId'];
-    $requete = "SELECT coursesId,reservationDate FROM reservation WHERE usersId = $userid";
-    $result = $bddPDO->query($requete);
+    $requetes = "SELECT coursesId,reservationDate FROM reservation WHERE usersId = $userid";
+    $results = $bddPDO->query($requetes);
 
-    $reservation = $result->fetchAll(PDO::FETCH_ASSOC);
+    $reservation = $results->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 

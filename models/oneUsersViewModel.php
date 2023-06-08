@@ -9,6 +9,5 @@ require('../models/database.php');
 
         $users = $result->fetchAll(PDO::FETCH_ASSOC);
     }
-?>
 
 
