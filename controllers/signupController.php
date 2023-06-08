@@ -1,9 +1,9 @@
 <?php
 require_once('models/registration.php');
 
-function addNewUsers($nom, $prenom,$mail, $password){
+function addNewUsers($nom, $prenom,$mail,$mobile,$password){
 
-    $resultAddOneUsers = addUser($nom, $prenom,$mail,$password);
+    $resultAddOneUsers = addUser($nom, $prenom,$mail,$mobile,$password);
 
     if(!$resultAddOneUsers){
         $message = "Un problème est survenu, l'enregistrement n'a pas été effectué !";
@@ -19,7 +19,7 @@ function addNewUsers($nom, $prenom,$mail, $password){
 function addOneUsers(){
 
     if (isset($_POST['saveUser'])){
-        if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['mail']) && !empty($_POST['password']))
+        if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['mail']) && !empty($_POST['mobile']) && !empty($_POST['password']))
         {
             if (!filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL)){
 
@@ -36,7 +36,7 @@ function addOneUsers(){
                     echo "<script>alert('Un compte existe déja avec cette adresse mail')</script> ";
                 }else{
                     $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
-                    addNewUsers($_POST['nom'],$_POST['prenom'],$_POST['mail'],$password);
+                    addNewUsers($_POST['nom'],$_POST['prenom'],$_POST['mail'],$_POST['mobile'], $password);
                 }
             }
 
