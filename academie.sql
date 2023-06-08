@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 02 juin 2023 à 12:54
--- Version du serveur : 10.4.27-MariaDB
--- Version de PHP : 8.2.0
+-- Généré le : jeu. 08 juin 2023 à 19:00
+-- Version du serveur : 10.4.28-MariaDB
+-- Version de PHP : 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,7 +39,11 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`idCourses`, `coursesCode`, `coursesTitle`, `coursesType`) VALUES
-(1, '1', 'Français', 'Français');
+(1, '1', 'Français', 'Français'),
+(2, '2', 'Maths', 'Maths'),
+(3, '3', 'Physique', 'Physique'),
+(4, '4', 'Anglais', 'Anglais'),
+(5, '5', 'Economie', 'Economie');
 
 -- --------------------------------------------------------
 
@@ -51,15 +55,19 @@ CREATE TABLE `reservation` (
   `id` int(11) NOT NULL,
   `usersId` int(11) NOT NULL,
   `coursesId` int(11) NOT NULL,
-  `inscriptionDate` date NOT NULL
+  `reservationDate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `reservation`
 --
 
-INSERT INTO `reservation` (`id`, `usersId`, `coursesId`, `inscriptionDate`) VALUES
-(1, 1, 1, '2023-05-31');
+INSERT INTO `reservation` (`id`, `usersId`, `coursesId`, `reservationDate`) VALUES
+(6, 9, 1, '2023-06-08'),
+(7, 9, 2, '2023-06-08'),
+(8, 9, 3, '2023-06-08'),
+(9, 9, 4, '2023-06-09'),
+(10, 9, 5, '2023-06-14');
 
 -- --------------------------------------------------------
 
@@ -71,20 +79,19 @@ CREATE TABLE `users` (
   `usersId` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
+  `mobile` varchar(15) NOT NULL,
   `mail` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `inscriptionDate` date NOT NULL,
+  `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`usersId`, `nom`, `prenom`, `mail`, `password`) VALUES
-(1, 'test', 'one', 'test@gmail.com', 'azerty'),
-(2, 'popo', 'popo', 'popo@gmail.com', '$2y$10$x8g1SpXgKVJo1p28cqy1Lubs/VUFTcdp3dt1QeeJAffMOi1dtgfrG'),
-(3, 'Rémi', 'Sio', 'admin@gmail.com', '$2y$10$VpQzQR1L04INTDf1zyciN.7d5ocvRF9dFb79LJg5XIjI9NYnosRN.'),
-(4, 'Rémi', 'Sio', 'admin@gmail.com', '$2y$10$4J..6GMsy/pv8MADXL1PMevmlGX4xsuPAHPCyOEp0.nze.2jsnu.2'),
-(5, 'momo', 'momo', 'admin1@gmail.com', '$2y$10$bgf/O6c7EL7uQM2Ka4ziNuGDQcp/601jDnXvO20onQas1GSqv/sVm');
+INSERT INTO `users` (`usersId`, `nom`, `prenom`, `mobile`, `mail`, `password`, `inscriptionDate`, `admin`) VALUES
+(9, 'modibo', 'modibo', '0645590008', 'admin@admin.com', '$2y$10$rTWS6Qub3Lh6k7xlxPBhEuMD/cIEI6HJajhFydWpzTTuSiRnMAS0.', '2023-06-08', 0);
 
 --
 -- Index pour les tables déchargées
@@ -118,19 +125,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `idCourses` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idCourses` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `usersId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `usersId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Contraintes pour les tables déchargées
