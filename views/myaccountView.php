@@ -80,7 +80,7 @@ if(isset($results)){
         echo"<table class='text-xl w-[40%] text-left text-gray-500 dark:text-gray-400'>";
 echo"<thead class='text-lg text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>";
         echo"<tr>";
-        echo"<th class='px-6 py-3'>Cours</th>";
+        echo"<th class='px-6 py-3'>Cours Code</th>";
         echo"<th class='px-6 py-3'>
                 <div class='flex items-center'>
                         Catégorie
@@ -103,11 +103,11 @@ echo"</thead>";
         foreach ($reservation as $oneusers) {
 
         echo"<tr class='bg-white border-b dark:bg-gray-800 dark:border-gray-700'>";
-           echo"<td class='px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white'>Test</td>";
-           echo"<td class='px-6 py-4'> $oneusers[coursesId]</td> ";
+           echo"<td class='px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white'>$oneusers[coursesId]</td>";
+           echo"<td class='px-6 py-4'> $oneusers[coursesTitle]</td> ";
            echo"<td class='px-6 py-4'> $oneusers[reservationDate]</td>";
            echo"<td class='px-6 py-4 text-right'>";
-           echo"<a href='' class='font-medium text-blue-600 dark:text-blue-500 hover:underline'>Edit</a></td>";
+           echo"<a href=''  class='inline-block rounded bg-red-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]'>Supprimer</a></td>";
         echo"</tr>";
 
             }
