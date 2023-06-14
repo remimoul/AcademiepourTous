@@ -13,7 +13,7 @@ ob_start();
 
     <!--    <link rel="stylesheet" href="./node_modules/tw-elements/dist/css/tw-elements.min.css">-->
     <script defer src="./node_modules/tw-elements/dist/js/tw-elements.umd.min.js">
-        // <script defer src="assets/js/script.js">
+         // <script defer src="assets/js/script.js">
 
     </script>
     <title>Accueil - L'academie pour tous</title>

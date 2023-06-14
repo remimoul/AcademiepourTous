@@ -54,6 +54,15 @@ require('header.php');
         transform: translateY(0%);
     }
 
+    .bottom-sheet.dragging .content{
+        transition: none;
+    }
+
+    .bottom-sheet.fullscreen .content{
+        border-radius: 0;
+        overflow-y: hidden;
+    }
+
     .bottom-sheet .header{
         display: flex;
         justify-content: center;
@@ -109,20 +118,29 @@ require('header.php');
             à comprendre les concepts difficiles, à organiser leur travail et à développer des compétences d'étude efficaces.
         </p>
     </div>
-    <div class="px-6 pt-4 pb-2">
-        <button class="show-modal bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
 
-            Réserver
-        </button>
-        <div class="bottom-sheet">
+    <div class="px-6 pt-4 pb-2">
+        <button class="show-modal bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" data-target="#aide-aux-devoirs-form">Réserver</button>
+        <div class="bottom-sheet" id="aide-aux-devoirs-form">
             <div class="sheet-overlay"></div>
             <div class="content">
                 <div class="header">
                     <div class="drag-icon"><span></span></div>
                 </div>
                 <div class="bodydrag">
-                <h2>Bottom Sheet Modal</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ex ligula, egestas ac purus in, mattis maximus tellus. Sed turpis purus, consectetur id pulvinar ac, fermentum vel tellus. Pellentesque in libero mi. Maecenas auctor lobortis purus, eu viverra nibh maximus eu. Sed maximus eget nisi a tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eu sapien bibendum, suscipit eros a, placerat eros. Nunc nec quam eu quam porttitor auctor nec nec lectus. Mauris molestie arcu urna, eu rutrum odio bibendum eget. Suspendisse id libero erat. Mauris mollis, nibh eget tincidunt efficitur, leo lacus laoreet ante, quis rutrum turpis massa non dolor. Vestibulum luctus congue massa, id tempor odio accumsan in. Etiam nisi ex, pharetra nec sollicitudin eget, rhoncus eu massa. Curabitur sagittis euismod lacus, finibus vulputate nisi. Phasellus dapibus nunc id neque commodo posuere nec nec leo.</p>
+                <h2>Aide aux devoirs</h2>
+                    <form action="./process-form.php" method="POST">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">E-mail :</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
                     <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
 
                         <a href="./views/contactView.php">Réserver  </a>
@@ -144,11 +162,34 @@ require('header.php');
         </p>
     </div>
     <div class="px-6 pt-4 pb-2">
-        <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        <button class="show-modal bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" data-target="#maths">Réserver</button>
+        <div class="bottom-sheet" id="maths">
+            <div class="sheet-overlay show.modal"></div>
+            <div class="content">
+                <div class="header">
+                    <div class="drag-icon"><span></span></div>
+                </div>
+                <div class="bodydrag">
+                    <h2>Mathématiques</h2>
+                    <form action="./process-form.php" method="POST">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
 
-            <a href="./views/contactView.php">Réserver  </a>
-        </button>
+                        <label for="email">E-mail :</label>
+                        <input type="email" id="email" name="email" required>
 
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
+                    <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+
+                        <a href="./views/contactView.php">Réserver  </a>
+                    </button>
+                </div>
+            </div>
+        </div>
         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mx-4"> Tél : 06 11 01 60 83</span>
     </div>
 </div>
@@ -232,38 +273,131 @@ require('header.php');
 </section>
 
 <script>
-const showModalBtn = document.querySelector(".show-modal");
+const showModalBtn = document.querySelectorAll(".show-modal");
 const bottomSheet = document.querySelector(".bottom-sheet");
 const sheetOverlay = bottomSheet.querySelector(".sheet-overlay");
 const sheetContent = bottomSheet.querySelector(".content");
 const dragIcon = bottomSheet.querySelector(".drag-icon");
 
-// let isDragging = false;
+let isDragging = false,startY, startHeight;
 
 const showBottomSheet = () => {
-bottomSheet.classList.add("show");
-}
-const hideBottomSheet = () =>{
-    bottomSheet.classList.remove("show");
+    bottomSheet.classList.add("show");
+    updateSheetHeight(50);
 }
 
-// const dragStart = () => {
-//     isDragging = true;
-// }
 
-const dragging = (e) =>{
-    // if(!isDragging) return;
-    sheetContent.style.height = `${e.pageY}vh`;
-    console.log(e.pageY);
+const hideBottomSheet = () => {
+    // bottomSheet.classList.remove("show","modal");
+    const modals = document.querySelectorAll(".show .modal"); // Sélectionnez tous les modals qui ont la classe "show"
+    modals.forEach(function(modal) {
+        modal.classList.remove("show"); // Supprimez la classe "show" de chaque modal
+    });
+    bottomSheet.classList.remove("show"); // Supprime la classe "show" du fond de la feuille
+
+    document.body.style.overflowY = "auto";
 }
 
-// dragIcon.addEventListener("mousedown",dragStart);
-// dragIcon.addEventListener("mousedown",dragStart);
-dragIcon.addEventListener("mousemove",dragging);
-showModalBtn.addEventListener("click", showBottomSheet);
-sheetOverlay.addEventListener("click",hideBottomSheet);
+const updateSheetHeight = (height) => {
+    sheetContent.style.height = `${height}vh`;
+    bottomSheet.classList.toggle("fullscreen", height === 100);
+}
+
+const dragStart = (e) => {
+    isDragging = true;
+    startY = e.pageY || e.touches?.[0].pageY;
+    startHeight = parseInt(sheetContent.style.height);
+    bottomSheet.classList.add("dragging");
+}
+
+const dragging = (e) => {
+    if(!isDragging) return;
+    const delta = startY - (e.pageY || e.touches?.[0].pageY);
+    const newHeight = startHeight + delta / window.innerHeight * 100;
+    updateSheetHeight(newHeight);
+}
+
+const dragStop = () => {
+    isDragging = false;
+    bottomSheet.classList.remove("dragging");
+    const sheetHeight = parseInt(sheetContent.style.height);
+    sheetHeight < 25 ? hideBottomSheet() : sheetHeight > 75 ? updateSheetHeight(100) : updateSheetHeight(50);
+}
+
+document.addEventListener("mouseup", dragStop);
+dragIcon.addEventListener("mousedown", dragStart);
+document.addEventListener("mousemove", dragging);
+
+document.addEventListener("touchend", dragStop);
+dragIcon.addEventListener("touchstart", dragStart);
+document.addEventListener("touchmove", dragging);
+
+sheetOverlay.addEventListener("click", hideBottomSheet);
+
+for (let i = 0; i < showModalBtn.length; i++) {
+    showModalBtn[i].addEventListener("click", function() {
+        const modalTarget = this.dataset.target;
+        const modal = document.querySelector(modalTarget);
+        modal.classList.add("show", "modal");
+        showBottomSheet(); // Appel de la fonction pour afficher la fenêtre modale
+    });
+}
 
 </script>
+
+<!--<script>-->
+<!---->
+<!--    const modalButtons = document.querySelectorAll('.show-modal');-->
+<!--    const bottomSheet = document.querySelector('.bottom-sheet');-->
+<!--    const sheetOverlay = bottomSheet.querySelector('.sheet-overlay');-->
+<!--    const sheetContent = bottomSheet.querySelector('.content');-->
+<!---->
+<!--    modalButtons.forEach(modalButton => {-->
+<!--        modalButton.addEventListener('click', event => {-->
+<!--            event.stopPropagation(); // Empêche la propagation de l'événement-->
+<!--            const target = modalButton.dataset.target;-->
+<!--            const modal = document.querySelector(target);-->
+<!--            modal.classList.add('show');-->
+<!--            bottomSheet.classList.add('show');-->
+<!--        });-->
+<!--    });-->
+<!---->
+<!--    bottomSheet.addEventListener('click', event => {-->
+<!--        event.stopPropagation(); // Empêche la propagation de l'événement-->
+<!--        if (event.target === sheetOverlay || event.target.classList.contains('modal-close')) {-->
+<!--            const activeModals = bottomSheet.querySelectorAll('.modal.show');-->
+<!--            activeModals.forEach(modal => modal.classList.remove('show'));-->
+<!--            if (activeModals.length === 0) {-->
+<!--                bottomSheet.classList.remove('show');-->
+<!--            }-->
+<!--        }-->
+<!--    });-->
+<!---->
+<!--    sheetContent.addEventListener('click', event => {-->
+<!--        event.stopPropagation(); // Empêche la propagation de l'événement-->
+<!--    });-->
+<!---->
+<!--    const modals = bottomSheet.querySelectorAll('.modal');-->
+<!--    modals.forEach(modal => {-->
+<!--        modal.addEventListener('click', event => {-->
+<!--            event.stopPropagation(); // Empêche la propagation de l'événement-->
+<!--            if (event.target === modal || event.target.classList.contains('modal-close')) {-->
+<!--                modal.classList.remove('show');-->
+<!--                const activeModals = bottomSheet.querySelectorAll('.modal.show');-->
+<!--                if (activeModals.length === 0) {-->
+<!--                    bottomSheet.classList.remove('show');-->
+<!--                }-->
+<!--            }-->
+<!--        });-->
+<!---->
+<!--        modal.querySelectorAll('.modal-content, .modal-header, .modal-footer').forEach(content => {-->
+<!--            content.addEventListener('click', event => {-->
+<!--                event.stopPropagation(); // Empêche la propagation de l'événement-->
+<!--            });-->
+<!--        });-->
+<!--    });-->
+<!---->
+<!--</script>-->
 
 <?php
 
