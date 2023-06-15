@@ -171,7 +171,7 @@ require('header.php');
                 </div>
                 <div class="bodydrag">
                     <h2>Mathématiques</h2>
-                    <form action="./process-form.php" method="POST">
+                    <form action="" method="POST">
                         <label for="name">Nom :</label>
                         <input type="text" id="name" name="name" required>
 
@@ -204,10 +204,37 @@ require('header.php');
         </p>
     </div>
     <div class="px-6 pt-4 pb-2">
-        <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-
-            <a href="./views/contactView.php">Réserver  </a>
+        <button class="show-modal bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" data-target="#Physique-Chimie">
+           Réserver
         </button>
+
+        <div class="bottom-sheet" id="Physique-Chimie">
+            <div class="sheet-overlay show.modal"></div>
+            <div class="content">
+                <div class="header">
+                    <div class="drag-icon"><span></span></div>
+                </div>
+                <div class="bodydrag">
+                    <h2>Physique-Chimie</h2>
+                    <form action="" method="POST">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">E-mail :</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
+                    <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+
+                        <a href="./views/contactView.php">Réserver  </a>
+                    </button>
+                </div>
+            </div>
+        </div>
         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mx-4"> Tél : 06 11 01 60 83</span>
     </div>
 </div>
@@ -224,10 +251,37 @@ require('header.php');
         </p>
     </div>
     <div class="px-6 pt-4 pb-2">
-        <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-
-            <a href="./views/contactView.php">Réserver  </a>
+        <button class="show-modal bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" data-target="#Français">
+            Réserver
         </button>
+
+        <div class="bottom-sheet" id="Français">
+            <div class="sheet-overlay show.modal"></div>
+            <div class="content">
+                <div class="header">
+                    <div class="drag-icon"><span></span></div>
+                </div>
+                <div class="bodydrag">
+                    <h2>Français</h2>
+                    <form action="" method="POST">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">E-mail :</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
+                    <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+
+                        <a href="./views/contactView.php">Réserver  </a>
+                    </button>
+                </div>
+            </div>
+        </div>
 
         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mx-4"> Tél : 06 11 01 60 83</span>
     </div>
@@ -243,10 +297,37 @@ require('header.php');
         </p>
     </div>
     <div class="px-6 pt-4 pb-2">
-        <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-
-            <a href="./views/contactView.php">Réserver  </a>
+        <button class="show-modal bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" data-target="#Anglais">
+            Réserver
         </button>
+
+        <div class="bottom-sheet" id="Anglais">
+            <div class="sheet-overlay show.modal"></div>
+            <div class="content">
+                <div class="header">
+                    <div class="drag-icon"><span></span></div>
+                </div>
+                <div class="bodydrag">
+                    <h2>Anglais</h2>
+                    <form action="" method="POST">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">E-mail :</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
+                    <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+
+                        <a href="./views/contactView.php">Réserver  </a>
+                    </button>
+                </div>
+            </div>
+        </div>
 
         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mx-4"> Tél : 06 11 01 60 83</span>
     </div>
@@ -262,10 +343,37 @@ require('header.php');
         </p>
     </div>
     <div class="px-6 pt-4 pb-2">
-        <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-
-            <a href="./views/contactView.php">Réserver  </a>
+        <button class="show-modal bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" data-target="#Economie">
+            Réserver
         </button>
+
+        <div class="bottom-sheet" id="Economie">
+            <div class="sheet-overlay show.modal"></div>
+            <div class="content">
+                <div class="header">
+                    <div class="drag-icon"><span></span></div>
+                </div>
+                <div class="bodydrag">
+                    <h2>Economie</h2>
+                    <form action="" method="POST">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">E-mail :</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
+                    <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+
+                        <a href="./views/contactView.php">Réserver  </a>
+                    </button>
+                </div>
+            </div>
+        </div>
         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mx-4"> Tél : 06 11 01 60 83</span>
     </div>
 </div>
@@ -273,131 +381,102 @@ require('header.php');
 </section>
 
 <script>
-const showModalBtn = document.querySelectorAll(".show-modal");
-const bottomSheet = document.querySelector(".bottom-sheet");
-const sheetOverlay = bottomSheet.querySelector(".sheet-overlay");
-const sheetContent = bottomSheet.querySelector(".content");
-const dragIcon = bottomSheet.querySelector(".drag-icon");
+    const showModalBtn = document.querySelectorAll(".show-modal");
+    const closeBtn = document.querySelectorAll(".close-modal");
+    const bottomSheets = document.querySelectorAll(".bottom-sheet");
+    const sheetOverlays = document.querySelectorAll(".sheet-overlay");
+    const sheetContents = document.querySelectorAll(".content");
+    const dragIcons = document.querySelectorAll(".drag-icon");
 
-let isDragging = false,startY, startHeight;
+    let isDragging = false;
+    let startY, startHeight;
 
-const showBottomSheet = () => {
-    bottomSheet.classList.add("show");
-    updateSheetHeight(50);
-}
+    const showBottomSheet = (event) => {
+        const target = event.currentTarget.dataset.target;
+        const bottomSheet = document.querySelector(target);
+        bottomSheet.classList.add("show");
+        updateSheetHeight(bottomSheet.querySelector(".content"), 50);
+    }
 
+    const hideBottomSheet = (event) => {
+        const bottomSheet = event.currentTarget.closest(".bottom-sheet");
+        if (bottomSheet) {
+            bottomSheet.classList.remove("show");
+            document.body.style.overflowY = "auto";
+        }
+    };
 
-const hideBottomSheet = () => {
-    // bottomSheet.classList.remove("show","modal");
-    const modals = document.querySelectorAll(".show .modal"); // Sélectionnez tous les modals qui ont la classe "show"
-    modals.forEach(function(modal) {
-        modal.classList.remove("show"); // Supprimez la classe "show" de chaque modal
+    const updateSheetHeight = (sheetContent, height) => {
+        sheetContent.style.height = `${height}vh`;
+        sheetContent.parentElement.classList.toggle("fullscreen", height === 100);
+    }
+
+    const dragStart = (event) => {
+        const bottomSheet = event.currentTarget.closest(".bottom-sheet");
+        if (bottomSheet) {
+            bottomSheet.classList.add("dragging");
+            startY = event.clientY || event.touches?.[0].clientY;
+            startHeight = parseInt(bottomSheet.querySelector(".content").style.height);
+            isDragging = true;
+        }
+    };
+
+    const dragging = (event) => {
+        if (!isDragging) return;
+        const clientY = event.clientY || event.touches?.[0].clientY;
+        const deltaY = clientY - startY;
+        const newHeight = startHeight - deltaY / window.innerHeight * 100;
+        bottomSheets.forEach((bottomSheet) => {
+            if (bottomSheet.classList.contains("dragging")) {
+                const sheetContent = bottomSheet.querySelector(".content");
+                updateSheetHeight(sheetContent, newHeight);
+            }
+        });
+    };
+
+    const dragStop = (event) => {
+        isDragging = false;
+        bottomSheets.forEach((bottomSheet) => {
+            if (bottomSheet.classList.contains("dragging")) {
+                const sheetContent = bottomSheet.querySelector(".content");
+                if (sheetContent && bottomSheet.contains(sheetContent)) {
+                    const sheetHeight = parseInt(sheetContent.style.height);
+                    if (sheetHeight < 25) {
+                        hideBottomSheet(event);
+                    } else if (sheetHeight > 75) {
+                        updateSheetHeight(sheetContent, 100);
+                    } else {
+                        updateSheetHeight(sheetContent, 50);
+                    }
+                }
+                bottomSheet.classList.remove("dragging");
+            }
+        });
+    }
+
+    showModalBtn.forEach((showModalBtn) => {
+        showModalBtn.addEventListener("click", showBottomSheet);
     });
-    bottomSheet.classList.remove("show"); // Supprime la classe "show" du fond de la feuille
 
-    document.body.style.overflowY = "auto";
-}
-
-const updateSheetHeight = (height) => {
-    sheetContent.style.height = `${height}vh`;
-    bottomSheet.classList.toggle("fullscreen", height === 100);
-}
-
-const dragStart = (e) => {
-    isDragging = true;
-    startY = e.pageY || e.touches?.[0].pageY;
-    startHeight = parseInt(sheetContent.style.height);
-    bottomSheet.classList.add("dragging");
-}
-
-const dragging = (e) => {
-    if(!isDragging) return;
-    const delta = startY - (e.pageY || e.touches?.[0].pageY);
-    const newHeight = startHeight + delta / window.innerHeight * 100;
-    updateSheetHeight(newHeight);
-}
-
-const dragStop = () => {
-    isDragging = false;
-    bottomSheet.classList.remove("dragging");
-    const sheetHeight = parseInt(sheetContent.style.height);
-    sheetHeight < 25 ? hideBottomSheet() : sheetHeight > 75 ? updateSheetHeight(100) : updateSheetHeight(50);
-}
-
-document.addEventListener("mouseup", dragStop);
-dragIcon.addEventListener("mousedown", dragStart);
-document.addEventListener("mousemove", dragging);
-
-document.addEventListener("touchend", dragStop);
-dragIcon.addEventListener("touchstart", dragStart);
-document.addEventListener("touchmove", dragging);
-
-sheetOverlay.addEventListener("click", hideBottomSheet);
-
-for (let i = 0; i < showModalBtn.length; i++) {
-    showModalBtn[i].addEventListener("click", function() {
-        const modalTarget = this.dataset.target;
-        const modal = document.querySelector(modalTarget);
-        modal.classList.add("show", "modal");
-        showBottomSheet(); // Appel de la fonction pour afficher la fenêtre modale
+    closeBtn.forEach((closeBtn) => {
+        closeBtn.addEventListener("click", hideBottomSheet);
     });
-}
+
+    sheetOverlays.forEach((sheetOverlay) => {
+        sheetOverlay.addEventListener("click", hideBottomSheet);
+    });
+
+    bottomSheets.forEach((bottomSheet) => {
+        const dragIcon = bottomSheet.querySelector(".drag-icon");
+        dragIcon.addEventListener("mousedown", dragStart);
+        dragIcon.addEventListener("touchstart", dragStart);
+        window.addEventListener("mousemove", dragging);
+        window.addEventListener("touchmove", dragging);
+        window.addEventListener("mouseup", dragStop);
+        window.addEventListener("touchend", dragStop);
+    });
 
 </script>
-
-<!--<script>-->
-<!---->
-<!--    const modalButtons = document.querySelectorAll('.show-modal');-->
-<!--    const bottomSheet = document.querySelector('.bottom-sheet');-->
-<!--    const sheetOverlay = bottomSheet.querySelector('.sheet-overlay');-->
-<!--    const sheetContent = bottomSheet.querySelector('.content');-->
-<!---->
-<!--    modalButtons.forEach(modalButton => {-->
-<!--        modalButton.addEventListener('click', event => {-->
-<!--            event.stopPropagation(); // Empêche la propagation de l'événement-->
-<!--            const target = modalButton.dataset.target;-->
-<!--            const modal = document.querySelector(target);-->
-<!--            modal.classList.add('show');-->
-<!--            bottomSheet.classList.add('show');-->
-<!--        });-->
-<!--    });-->
-<!---->
-<!--    bottomSheet.addEventListener('click', event => {-->
-<!--        event.stopPropagation(); // Empêche la propagation de l'événement-->
-<!--        if (event.target === sheetOverlay || event.target.classList.contains('modal-close')) {-->
-<!--            const activeModals = bottomSheet.querySelectorAll('.modal.show');-->
-<!--            activeModals.forEach(modal => modal.classList.remove('show'));-->
-<!--            if (activeModals.length === 0) {-->
-<!--                bottomSheet.classList.remove('show');-->
-<!--            }-->
-<!--        }-->
-<!--    });-->
-<!---->
-<!--    sheetContent.addEventListener('click', event => {-->
-<!--        event.stopPropagation(); // Empêche la propagation de l'événement-->
-<!--    });-->
-<!---->
-<!--    const modals = bottomSheet.querySelectorAll('.modal');-->
-<!--    modals.forEach(modal => {-->
-<!--        modal.addEventListener('click', event => {-->
-<!--            event.stopPropagation(); // Empêche la propagation de l'événement-->
-<!--            if (event.target === modal || event.target.classList.contains('modal-close')) {-->
-<!--                modal.classList.remove('show');-->
-<!--                const activeModals = bottomSheet.querySelectorAll('.modal.show');-->
-<!--                if (activeModals.length === 0) {-->
-<!--                    bottomSheet.classList.remove('show');-->
-<!--                }-->
-<!--            }-->
-<!--        });-->
-<!---->
-<!--        modal.querySelectorAll('.modal-content, .modal-header, .modal-footer').forEach(content => {-->
-<!--            content.addEventListener('click', event => {-->
-<!--                event.stopPropagation(); // Empêche la propagation de l'événement-->
-<!--            });-->
-<!--        });-->
-<!--    });-->
-<!---->
-<!--</script>-->
 
 <?php
 
