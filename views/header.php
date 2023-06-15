@@ -9,13 +9,8 @@ ob_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=egde" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!--    <link rel="stylesheet" href="./node_modules/tw-elements/dist/css/tw-elements.min.css">-->
-    <script defer src="./node_modules/tw-elements/dist/js/tw-elements.umd.min.js">
-         // <script defer src="assets/js/script.js">
-
-    </script>
+    <link rel="stylesheet" href="/AcademiepourTous/assets/css/styleaca.css">
+    <script defer src="/AcademiepourTous/assets/js/script.js"></script>
     <title>Accueil - L'academie pour tous</title>
 </head>
 
@@ -96,15 +91,3 @@ ob_start();
         </div>
     </nav>
 </header>
-
-<script>
-
-    function toggleMenu() {
-        var menu = document.getElementById("navbar-default");
-        menu.classList.toggle("hidden");
-    }
-
-    let menuToggle = document.querySelector('.navbar-menu-toggle');
-    menuToggle.addEventListener('click', toggleMenu);
-
-</script>

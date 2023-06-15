@@ -194,6 +194,8 @@ require('header.php');
 
 </body>
 <br><br><br>
+
+<script src="./node_modules/tw-elements/dist/js/tw-elements.umd.min.js"> </script>
 <?php
 
 require('footer.html');
