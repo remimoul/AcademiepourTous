@@ -5,6 +5,7 @@ ob_start();
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/AcademiepourTous/">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=egde" />
