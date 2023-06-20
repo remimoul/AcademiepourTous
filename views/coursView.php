@@ -26,22 +26,14 @@ include('header.php');
                 </div>
                 <div class="bodydrag">
                 <h2>Aide aux devoirs</h2>
-                    <form action="./process-form.php" method="POST">
-                        <label for="name">Nom :</label>
-                        <input type="text" id="name" name="name" required>
+                    <form action="reservationCoursesController/addNewOneCourses" method="POST">
 
-                        <label for="email">E-mail :</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Message :</label>
-                        <textarea id="message" name="message" required></textarea>
-
-                        <button type="submit">Envoyer</button>
+                        <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+                        <input type="hidden" id="coursesId" name="coursesId" value="3">
+                        <label for="date">Votre date de reservation :</label>
+                        <input type="date" id="reservationDate" name="reservationDate" required>
+                        <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
                     </form>
-                    <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-
-                        <a href="./views/contactView.php">Réserver  </a>
-                    </button>
 
             </div>
         </div>
@@ -64,26 +56,18 @@ include('header.php');
             <div class="sheet-overlay show.modal"></div>
             <div class="content">
                 <div class="header">
-                    <div class="drag-icon"><span></span></div>
+                    <div class="drag-icon"><span>Rester appuyez dessus et tirer</span></div>
                 </div>
                 <div class="bodydrag">
                     <h2>Mathématiques</h2>
-                    <form action="" method="POST">
-                        <label for="name">Nom :</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">E-mail :</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Message :</label>
-                        <textarea id="message" name="message" required></textarea>
-
-                        <button type="submit">Envoyer</button>
+                    <form action="reservationCoursesController/addNewOneCourses" method="POST">
+                            <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+                            <input type="hidden" id="coursesId" name="coursesId" value="2">
+                            <label for="date">Votre date de reservation :</label>
+                            <input type="date" id="reservationDate" name="reservationDate" required>
+                            <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
                     </form>
-                    <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
 
-                        <a href="./views/contactView.php">Réserver  </a>
-                    </button>
                 </div>
             </div>
         </div>
@@ -113,22 +97,13 @@ include('header.php');
                 </div>
                 <div class="bodydrag">
                     <h2>Physique-Chimie</h2>
-                    <form action="" method="POST">
-                        <label for="name">Nom :</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">E-mail :</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Message :</label>
-                        <textarea id="message" name="message" required></textarea>
-
-                        <button type="submit">Envoyer</button>
+                    <form action="reservationCoursesController/addNewOneCourses" method="POST">
+                        <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+                        <input type="hidden" id="coursesId" name="coursesId" value="4">
+                        <label for="date">Votre date de reservation :</label>
+                        <input type="date" id="reservationDate" name="reservationDate" required>
+                        <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
                     </form>
-                    <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-
-                        <a href="./views/contactView.php">Réserver  </a>
-                    </button>
                 </div>
             </div>
         </div>
@@ -160,22 +135,13 @@ include('header.php');
                 </div>
                 <div class="bodydrag">
                     <h2>Français</h2>
-                    <form action="" method="POST">
-                        <label for="name">Nom :</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">E-mail :</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Message :</label>
-                        <textarea id="message" name="message" required></textarea>
-
-                        <button type="submit">Envoyer</button>
+                    <form action="reservationCoursesController/addNewOneCourses" method="POST">
+                        <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+                        <input type="hidden" id="coursesId" name="coursesId" value="1">
+                        <label for="date">Votre date de reservation :</label>
+                        <input type="date" id="reservationDate" name="reservationDate" required>
+                        <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
                     </form>
-                    <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-
-                        <a href="./views/contactView.php">Réserver  </a>
-                    </button>
                 </div>
             </div>
         </div>
@@ -206,22 +172,13 @@ include('header.php');
                 </div>
                 <div class="bodydrag">
                     <h2>Anglais</h2>
-                    <form action="" method="POST">
-                        <label for="name">Nom :</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">E-mail :</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Message :</label>
-                        <textarea id="message" name="message" required></textarea>
-
-                        <button type="submit">Envoyer</button>
+                    <form action="reservationCoursesController/addNewOneCourses" method="POST">
+                        <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+                        <input type="hidden" id="coursesId" name="coursesId" value="5">
+                        <label for="date">Votre date de reservation :</label>
+                        <input type="date" id="reservationDate" name="reservationDate" required>
+                        <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
                     </form>
-                    <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-
-                        <a href="./views/contactView.php">Réserver  </a>
-                    </button>
                 </div>
             </div>
         </div>
@@ -252,22 +209,13 @@ include('header.php');
                 </div>
                 <div class="bodydrag">
                     <h2>Economie</h2>
-                    <form action="" method="POST">
-                        <label for="name">Nom :</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">E-mail :</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Message :</label>
-                        <textarea id="message" name="message" required></textarea>
-
-                        <button type="submit">Envoyer</button>
+                    <form action="reservationCoursesController/addNewOneCourses" method="POST">
+                        <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+                        <input type="hidden" id="coursesId" name="coursesId" value="6">
+                        <label for="date">Votre date de reservation :</label>
+                        <input type="date" id="reservationDate" name="reservationDate" required>
+                        <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
                     </form>
-                    <button class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-
-                        <a href="./views/contactView.php">Réserver  </a>
-                    </button>
                 </div>
             </div>
         </div>

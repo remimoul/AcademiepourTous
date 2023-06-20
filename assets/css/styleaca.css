@@ -124,8 +124,8 @@
 }
 
 .bottom-sheet .drag-icon span{
-    height: 4px;
-    width: 40px;
+    height: 15px;
+    width: 300px;
     display: block;
     background: #C7D0E1;
     border-radius:50px;
