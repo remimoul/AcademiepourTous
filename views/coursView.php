@@ -28,7 +28,13 @@ include('header.php');
                 <h2>Aide aux devoirs</h2>
                     <form action="reservationCoursesController/addNewOneCourses" method="POST">
 
-                        <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+                        <input type="hidden" id="usersId" name="usersId"  value="<?php
+                        if (!isset($_SESSION['usersId'])){
+                            echo "Connectez-vous pour reserver!";
+                        }else{
+                            echo $_SESSION['usersId'];
+                        }
+                         ?>">
                         <input type="hidden" id="coursesId" name="coursesId" value="3">
                         <label for="date">Votre date de reservation :</label>
                         <input type="date" id="reservationDate" name="reservationDate" required>
