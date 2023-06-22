@@ -1,7 +1,7 @@
 <?php
-require('header.php');
-require ('../models/oneUsersViewModel.php');
-require ('../models/reservationModel.php');
+require_once('header.php');
+require_once('../models/oneUsersViewModel.php');
+require_once('../models/reservationModel.php');
 
 
 foreach ($users as $row) {

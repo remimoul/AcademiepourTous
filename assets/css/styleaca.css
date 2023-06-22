@@ -1,6 +1,7 @@
 .navbar{
 
     background: linear-gradient(90deg, rgba(185,136,0,1) 0%, rgba(253,29,29,1) 50%, rgba(47,43,36,1) 100%);
+
 }
 
 
@@ -50,9 +51,9 @@
 
 /*ICI COMMENCE LE STYLE CSS POUR LE BOTTOM MODAL DE LA PAGE RESERVATION COURS*/
 
-.bodydrag{
-    background: #E3F2FD;
-}
+/*.bodydrag{*/
+/*    !*background: #E3F2FD;*!*/
+/*}*/
 
 .bottom-sheet {
     position:fixed;

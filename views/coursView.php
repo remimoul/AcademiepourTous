@@ -1,5 +1,5 @@
 <?php
-include('header.php');
+require_once('header.php');
 ?>
 
 <h1 class="text-6xl font-bold text-center my-12">Voici les cours que nous proposons &#128516;</h1>
@@ -28,17 +28,17 @@ include('header.php');
                 <h2>Aide aux devoirs</h2>
                     <form action="reservationCoursesController/addNewOneCourses" method="POST">
 
-                        <input type="hidden" id="usersId" name="usersId"  value="<?php
-                        if (!isset($_SESSION['usersId'])){
-                            echo "Connectez-vous pour reserver!";
-                        }else{
-                            echo $_SESSION['usersId'];
-                        }
-                         ?>">
-                        <input type="hidden" id="coursesId" name="coursesId" value="3">
-                        <label for="date">Votre date de reservation :</label>
-                        <input type="date" id="reservationDate" name="reservationDate" required>
-                        <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
+                        <?php if (!isset($_SESSION['usersId'])){
+                            echo "<h1 class='font-semibold text-red-700'>Connectez-vous pour reserver ! </h1>";
+                        } else{ ?>
+                            <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+
+                            <input type="hidden" id="coursesId" name="coursesId" value="3">
+                            <label for="date">Choissisez votre date de reservation :</label>
+                            <input type="date" id="reservationDate" name="reservationDate" required>
+                            <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
+                        <?php } ?>
+
                     </form>
 
             </div>
@@ -67,11 +67,17 @@ include('header.php');
                 <div class="bodydrag">
                     <h2>Mathématiques</h2>
                     <form action="reservationCoursesController/addNewOneCourses" method="POST">
+                        <?php if (!isset($_SESSION['usersId'])){
+                            echo "<h1 class='font-semibold text-red-700'>Connectez-vous pour reserver ! </h1>";
+                        } else{ ?>
                             <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+
                             <input type="hidden" id="coursesId" name="coursesId" value="2">
-                            <label for="date">Votre date de reservation :</label>
+                            <label for="date">Choissisez votre date de reservation :</label>
                             <input type="date" id="reservationDate" name="reservationDate" required>
                             <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
+                        <?php } ?>
+
                     </form>
 
                 </div>
@@ -104,11 +110,17 @@ include('header.php');
                 <div class="bodydrag">
                     <h2>Physique-Chimie</h2>
                     <form action="reservationCoursesController/addNewOneCourses" method="POST">
-                        <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
-                        <input type="hidden" id="coursesId" name="coursesId" value="4">
-                        <label for="date">Votre date de reservation :</label>
-                        <input type="date" id="reservationDate" name="reservationDate" required>
-                        <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
+                        <?php if (!isset($_SESSION['usersId'])){
+                            echo "<h1 class='font-semibold text-red-700'>Connectez-vous pour reserver ! </h1>";
+                        } else{ ?>
+                            <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+
+                            <input type="hidden" id="coursesId" name="coursesId" value="4">
+                            <label for="date">Choissisez votre date de reservation :</label>
+                            <input type="date" id="reservationDate" name="reservationDate" required>
+                            <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
+                        <?php } ?>
+
                     </form>
                 </div>
             </div>
@@ -142,11 +154,17 @@ include('header.php');
                 <div class="bodydrag">
                     <h2>Français</h2>
                     <form action="reservationCoursesController/addNewOneCourses" method="POST">
-                        <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
-                        <input type="hidden" id="coursesId" name="coursesId" value="1">
-                        <label for="date">Votre date de reservation :</label>
-                        <input type="date" id="reservationDate" name="reservationDate" required>
-                        <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
+                        <?php if (!isset($_SESSION['usersId'])){
+                            echo "<h1 class='font-semibold text-red-700'>Connectez-vous pour reserver ! </h1>";
+                        } else{ ?>
+                            <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+
+                            <input type="hidden" id="coursesId" name="coursesId" value="1">
+                            <label for="date">Choissisez votre date de reservation :</label>
+                            <input type="date" id="reservationDate" name="reservationDate" required>
+                            <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
+                        <?php } ?>
+
                     </form>
                 </div>
             </div>
@@ -179,11 +197,17 @@ include('header.php');
                 <div class="bodydrag">
                     <h2>Anglais</h2>
                     <form action="reservationCoursesController/addNewOneCourses" method="POST">
-                        <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
-                        <input type="hidden" id="coursesId" name="coursesId" value="5">
-                        <label for="date">Votre date de reservation :</label>
-                        <input type="date" id="reservationDate" name="reservationDate" required>
-                        <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
+                        <?php if (!isset($_SESSION['usersId'])){
+                            echo "<h1 class='font-semibold text-red-700'>Connectez-vous pour reserver ! </h1>";
+                        } else{ ?>
+                            <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+
+                            <input type="hidden" id="coursesId" name="coursesId" value="5">
+                            <label for="date">Choissisez votre date de reservation :</label>
+                            <input type="date" id="reservationDate" name="reservationDate" required>
+                            <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
+                        <?php } ?>
+
                     </form>
                 </div>
             </div>
@@ -216,11 +240,17 @@ include('header.php');
                 <div class="bodydrag">
                     <h2>Economie</h2>
                     <form action="reservationCoursesController/addNewOneCourses" method="POST">
-                        <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
-                        <input type="hidden" id="coursesId" name="coursesId" value="6">
-                        <label for="date">Votre date de reservation :</label>
-                        <input type="date" id="reservationDate" name="reservationDate" required>
-                        <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
+                        <?php if (!isset($_SESSION['usersId'])){
+                            echo "<h1 class='font-semibold text-red-700'>Connectez-vous pour reserver ! </h1>";
+                        } else{ ?>
+                            <input type="hidden" id="usersId" name="usersId"  value="<?php echo $_SESSION['usersId']; ?>">
+
+                            <input type="hidden" id="coursesId" name="coursesId" value="6">
+                            <label for="date">Choissisez votre date de reservation :</label>
+                            <input type="date" id="reservationDate" name="reservationDate" required>
+                            <button type="submit" class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
+                        <?php } ?>
+
                     </form>
                 </div>
             </div>

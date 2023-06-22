@@ -1,5 +1,5 @@
 <?php
-require('../models/database.php');
+require_once('../models/database.php');
 
     if (isset($_SESSION['usersId'])) {
         $bddPDO = connexionBDD();

@@ -29,8 +29,5 @@ if ($_GET['action']) {
 
 
 }else {
-
     require_once('views/accueilView.php');
-
-
 }

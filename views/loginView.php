@@ -8,7 +8,7 @@ require('header.php');
     <div class="container p-10">
         <div
             class="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
-            <div class="w-1/2">
+            <div class="w-full">
                 <div
                     class="block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
                     <div class="">
