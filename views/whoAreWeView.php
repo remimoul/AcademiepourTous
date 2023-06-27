@@ -20,12 +20,14 @@ require('header.php');
                 <span class="bg-sky-500 font-semibold">L’ACADEMIE POUR TOUS</span> , crée en 2017, est une association à but non lucratif,
                 dont le but est d’aider les élèves en proposant des cours de soutien.
                 <br>
-                En partenariat avec l’association <a href="https://lesilencedesjustes.fr/" class="hover:bg-amber-500 underline">Le Silence des Justes</a>,
+                En partenariat avec l’association <a href="https://lesilencedesjustes.fr/" class="bg-amber-500 underline">Le Silence des Justes</a>,
                 spécialisee dans le traitement du trouble du spectre de l'autisme et des troubles assimiles,
                 nous proposons à tous ceux qui le souhaitent un accompagnement scolaire.
             </p>
             <br><br>
-            <h2 class="text-4xl mx-10 font-bold navbar text-white shadow-xl w-[35%] mx-[5%] px-4 py-4">Nos locaux</h2>
+
+            <h2 class="text-4xl mx-10 font-bold navbar text-white shadow-xl w-[35%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-20 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="7 13 12 18 17 13" />  <polyline points="7 6 12 11 17 6" /></svg>Nos locaux</h2>
+
             <br>
             <div class="mx-auto my-4 max-w-screen-md">
                 <p class="text-2xl leading-loose mx-[5%]">
@@ -39,7 +41,7 @@ require('header.php');
                 </p>
             </div>
             <br><br>
-            <h2 class="text-4xl mx-10 font-bold navbar text-white shadow-xl w-[35%] mx-[5%] px-4 py-4">Nos cours</h2>
+            <h2 class="text-4xl mx-10 font-bold navbar text-white shadow-xl w-[35%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-20 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="7 13 12 18 17 13" />  <polyline points="7 6 12 11 17 6" /></svg>Nos cours</h2>
             <br>
             <div class="mx-auto my-4 max-w-screen-md">
                 <p class="text-2xl leading-loose mx-[5%]">
@@ -52,9 +54,6 @@ require('header.php');
                     Nous accueillons tous les publics et proposons des activités adaptées à leurs besoins et attentes, renforçant ainsi notre engagement en faveur de l'inclusion.
                 </p>
             </div>
-
-
-
         </div>
     </div>
 

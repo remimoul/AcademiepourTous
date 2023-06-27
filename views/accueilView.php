@@ -146,11 +146,11 @@ require_once('header.php');
     <h2 class="my-4 text-red-400 text-3xl font-bold">DECOUVREZ L'ACADEMIE POUR TOUS</h2>
 
 
-    <p>
+    <p class="text-2xl leading-loose">
         L'Académie Pour Tous est une association à but non lucratif (loi 1901) qui a pour but d’aider les élèves en difficultés scolaires.<br>
         Les cours se déroulent dans nos locaux du XIXème arrondissement de Paris et existent sous différents formats :
     </p>
-    <ul>
+    <ul class="text-2xl leading-loose list-disc">
         <br>
         <li>Ponctuels</li>
         <li>Suivi annuel</li>
@@ -158,7 +158,7 @@ require_once('header.php');
         <li>En duo</li>
         <li>En groupe</li>
     </ul>
-    <p>
+    <p class="text-2xl leading-loose">
         <br>
         Nous offrons également aux jeunes neurotypiques et enfants atteints de troubles du spectre autistique
         <br>et troubles neuro-développementaux (TSA, TND et TDH) enseignements et accompagnement scolaire.
@@ -172,7 +172,7 @@ require_once('header.php');
 <div class="grid grid-cols-2 gap-4">
     <div class="relative">
         <div class="absolute top-0 left-0 right-0 p-4  flex flex-col justify-center items-center">
-            <h3 class="text-white text-2xl font-bold text-center">STAGES INTENSIFS <br> BAC & BREVET</h3>
+            <h3 class="text-white md:text-2xl font-bold text-center">STAGES INTENSIFS <br> BAC & BREVET</h3>
         </div>
         <img src="assets/image/three.webp" alt="Image 1" />
         <div class="absolute bottom-0 flex justify-center left-0 right-0 p-4">
@@ -183,7 +183,7 @@ require_once('header.php');
     </div>
     <div class="relative">
         <div class="absolute top-0 left-0 right-0 p-4  flex flex-col justify-center items-center">
-            <h3 class="text-white text-2xl font-bold text-center">COURS DE SOUTIEN SCOLAIRE</h3>
+            <h3 class="text-white md:text-2xl font-bold text-center">COURS DE SOUTIEN SCOLAIRE</h3>
         </div>
         <img src="assets/image/four.webp" alt="Image 2" />
         <div class="absolute bottom-0 flex justify-center left-0 right-0 p-4">
