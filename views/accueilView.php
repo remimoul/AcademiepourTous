@@ -5,7 +5,9 @@ require_once('header.php');
 
 ?>
 
+
 <section class="py-24 ">
+
     <div
             id="carouselDarkVariant"
             class="relative px-[auto] "

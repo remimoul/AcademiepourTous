@@ -1,10 +1,4 @@
 
-// Initialization for ES Users
-// import { Carousel, initTE,} from "tw-elements";
-//
-// initTE({ Carousel });
-
-
 //---------------------------------------------------------------------------------------------------------------------------------//
 //FONCTION QUI PERMET DE GERER LES BOTTOM MODALS DANS LE FICHIER COURSVIEW
 

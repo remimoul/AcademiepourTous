@@ -66,7 +66,7 @@ function addCourses($usersId,$coursesId,$reservationDate)
             ;
             // Envoi du message
             $mail->send();
-            echo 'Le message a été envoyé a ladministrateur';
+           // echo 'Le message a été envoyé a ladministrateur';
 
 
             // Configuration du message de confirmation pour l'utilisateur
@@ -88,12 +88,13 @@ function addCourses($usersId,$coursesId,$reservationDate)
                 "<p>Nous vous confirmons la réservation du cours de <b>{$user['coursesTitle']}</b> pour la date suivante : <b><span style='color:red;'><b>$reservationDate</b></span></b>.</p>" .
                 "<p>Merci de votre confiance.</p>".
                 "<p>Nous vous recontacterons dès que possible pour confirmer la réservation</p>".
-                "<p>Lequipe de lacademie pour tous vous souhaite une bonne journée</p>"
+                "<p>Lequipe de lacademie pour tous vous souhaite une bonne journée</p>".
+                "<img src='https://i.ibb.co/bBqf3d1/logo-transparent.png' alt='Logo de lAcademie pour Tous' style='display:block;margin-top:20px;width: 100px;height: 100px'>"
             ;
 
             // Envoi du message de confirmation à l'utilisateur
             $mailConfirmation->send();
-            echo 'Lemessage de confirmation a été envoyé à l\'utilisateur.';
+//            echo 'Lemessage de confirmation a été envoyé à l\'utilisateur.';
 
         } catch (Exception $e) {
             echo "Erreur lors de l'envoi du message : {$mail->ErrorInfo}";
