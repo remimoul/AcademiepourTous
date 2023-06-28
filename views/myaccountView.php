@@ -6,9 +6,11 @@ require_once('../models/reservationModel.php');
 
 foreach ($users as $row) {
     ?>
-
-        <h1 class="text-6xl font-bold text-left my-12 mx-12">Bienvenue <?php echo $row['prenom'] ?> </h1>
-<h2 class="text-center text-2xl font-bold my-3 text-red-500">Mes informations</h2>
+    <h1 class=" text-left my-12 mx-12 text-4xl mx-10 font-bold navbar text-white shadow-xl w-[35%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-15 text-white"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>Bienvenue <?php echo $row['prenom'] ?></h1>
+<!--        <h1 class="text-6xl font-bold text-left my-12 mx-12">Bienvenue --><?php //echo $row['prenom'] ?><!-- </h1>-->
+<h2 class="text-center text-2xl font-bold my-3 text-red-500">Informations du compte</h2>
 <div class=' flex justify-center items-center'>
    <table class='text-xl w-[40%] text-gray-500 dark:text-gray-400'>
 
@@ -72,6 +74,17 @@ foreach ($users as $row) {
 
 
 <?php } ?>
+
+
+
+
+    <h1 class=" text-left my-12 mx-12 text-4xl mx-10 font-bold navbar text-white shadow-xl w-[35%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-20 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="7" r="4" />  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>Elèves</h1>
+
+    <p>Veuillez remplir le formulaire d'inscription</p>
+
+
+
+    <h1 class=" text-left my-12 mx-12 text-4xl mx-10 font-bold navbar text-white shadow-xl w-[35%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-20 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />  <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />  <circle cx="15" cy="9" r="1"  /></svg>Mes reservations</h1>
 
 <?php
 

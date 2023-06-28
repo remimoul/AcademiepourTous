@@ -18,8 +18,8 @@ require('header.php');
                                 <!--Logo-->
                                 <div class="text-center">
                                     <img
-                                        class="mx-auto w-48"
-                                        src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                                        class="mx-auto w-32"
+                                        src="assets/image/Logo.png"
                                         alt="logo" />
                                     <h4 class="mb-12 mt-1 pb-1 text-xl font-semibold">
                                         Connectez-vous à votre compte

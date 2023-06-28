@@ -19,8 +19,8 @@ ob_start();
 <header>
     <div class="mx-5 my-5">
         <a href="#" class="flex items-center">
-            <img src="assets/image/logo_transparent.png" class="h-13 mr-3 h-24 hover:text-red-700"/>
-            <!--            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">L'ACADEMIE POUR TOUS</span>-->
+            <img src="assets/image/Logo.png" class="h-13 mr-3 h-24 hover:text-red-700"/>
+                        <span class="self-center md:text-3xl font-semibold whitespace-nowrap text-rose-900 ">L'ACADEMIE POUR TOUS</span>
         </a>
     </div>
     <!-- <h1 class="m-3 border-4 border-red-600"> 06 11 01 60 83</h1> -->
