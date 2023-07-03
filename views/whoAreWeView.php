@@ -58,11 +58,10 @@ require('header.php');
     </div>
 
 </section>
-</body>
+
 
 <?php
 
 require('footer.html');
 ?>
 
-</html>
