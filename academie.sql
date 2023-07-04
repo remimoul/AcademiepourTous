@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 28 juin 2023 à 19:08
+-- Généré le : mar. 04 juil. 2023 à 17:10
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -45,6 +45,50 @@ INSERT INTO `courses` (`idCourses`, `coursesCode`, `coursesTitle`, `coursesType`
 (4, '4', 'Physique-Chimie', 'Soutien'),
 (5, '5', 'Anglais', 'Soutien'),
 (6, '6', 'Economie', 'Soutien');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `form_student`
+--
+
+CREATE TABLE `form_student` (
+  `id` int(11) NOT NULL,
+  `niveau` varchar(25) NOT NULL,
+  `etablissement` varchar(255) NOT NULL,
+  `classe` varchar(255) NOT NULL,
+  `name_student` varchar(25) NOT NULL,
+  `lastname_student` varchar(25) NOT NULL,
+  `sexe` varchar(25) NOT NULL,
+  `nationalite` varchar(255) NOT NULL,
+  `lieu` varchar(255) NOT NULL,
+  `adresse_student` varchar(255) NOT NULL,
+  `postal_student` varchar(255) NOT NULL,
+  `commune_student` varchar(255) NOT NULL,
+  `nom_resp` varchar(25) NOT NULL,
+  `prenom_resp` varchar(25) NOT NULL,
+  `pere` varchar(25) DEFAULT NULL,
+  `mere` varchar(25) DEFAULT NULL,
+  `tuteur` varchar(25) DEFAULT NULL,
+  `autre` varchar(25) NOT NULL,
+  `profession` varchar(25) NOT NULL,
+  `situation` varchar(255) NOT NULL,
+  `adresse_resp` varchar(255) NOT NULL,
+  `postal_resp` varchar(255) NOT NULL,
+  `commune_resp` varchar(255) NOT NULL,
+  `phone` int(15) NOT NULL,
+  `mobile` int(15) NOT NULL,
+  `mobilepro` int(15) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `urgent` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `form_student`
+--
+
+INSERT INTO `form_student` (`id`, `niveau`, `etablissement`, `classe`, `name_student`, `lastname_student`, `sexe`, `nationalite`, `lieu`, `adresse_student`, `postal_student`, `commune_student`, `nom_resp`, `prenom_resp`, `pere`, `mere`, `tuteur`, `autre`, `profession`, `situation`, `adresse_resp`, `postal_resp`, `commune_resp`, `phone`, `mobile`, `mobilepro`, `mail`, `urgent`) VALUES
+(1, '2023', 'daniel sorano', 'CM2', 'remi', 'remi', 'm', 'française', 'france', '18 rue goubet', '75019', 'paris', 'alex', 'alex', 'pere', 'mere', '', '', 'vendeur', 'marié', '18 rue goubet', '75019', 'paris', 912345687, 643984587, 794940094, 'test@gmail.com', '');
 
 -- --------------------------------------------------------
 
@@ -103,6 +147,12 @@ ALTER TABLE `courses`
   ADD PRIMARY KEY (`idCourses`);
 
 --
+-- Index pour la table `form_student`
+--
+ALTER TABLE `form_student`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `reservation`
 --
 ALTER TABLE `reservation`
@@ -125,6 +175,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `courses`
   MODIFY `idCourses` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT pour la table `form_student`
+--
+ALTER TABLE `form_student`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `reservation`
