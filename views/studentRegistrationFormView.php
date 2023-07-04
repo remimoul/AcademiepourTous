@@ -11,43 +11,43 @@ require('header.php');
 
             <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
 
-                    <form class="lg:col-auto">
+                    <form method="post" action="" class="lg:col-auto">
                         <div class="grid gap-4 gap-y-2 text-sm">
                             <div class="">
-                                <label for="full_name">Année Scolaire</label>
-                                <input type="text" name="full_name" id="full_name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                <label for="annéescolaire">Année Scolaire</label>
+                                <input type="text" name="annéescolaire" id="annéescolaire" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                             </div>
 
                             <div class="">
-                                <label for="email">Niveau</label>
-                                <input type="text" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="6ème" />
+                                <label for="niveau">Niveau</label>
+                                <input type="text" name="niveau" id="niveau" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="6ème" />
                             </div>
 
                             <div class="">
-                                <label for="address">Etablissement Fréquenté</label>
-                                <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                                <label for="etablissement">Etablissement Fréquenté</label>
+                                <input type="text" name="etablissement" id="etablissement" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                             </div>
 
                             <div class="">
-                                <label for="city">Classe</label>
-                                <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                                <label for="classe">Classe</label>
+                                <input type="text" name="classe" id="classe" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
                             </div>
 
                             <h3 class="text-left my-12 mx-12 text-4xl mx-10 font-bold navbar text-white shadow-xl mx-[5%] px-4 py-4 ">Eleves</h3>
 
 
                             <div class="">
-                                <label for="country">Nom</label>
+                                <label for="nomeleve">Nom</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="country" id="country" placeholder="Nom" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input name="nomeleve" id="nomeleve" placeholder="Nom" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
 
                                 </div>
                             </div>
 
                             <div class="">
-                                <label for="state">Prénoms</label>
+                                <label for="prenomeleve">Prénoms</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input name="prenomeleve" id="prenomeleve" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
                             </div>
 
@@ -56,39 +56,39 @@ require('header.php');
                             <div class="">
                                 <div class="">
 
-                                    <label for="billing_same" class="ml-2">Sexe : </label> <label>M :</label>
-                                    <input type="checkbox" name="billing_same" id="billing_same" class="form-checkbox" /> <label>F :</label>
-                                    <input type="checkbox" name="billing_same" id="billing_same" class="form-checkbox" />
+                                    <label for="sexe" class="ml-2">Sexe : </label> <label for="male">M :</label>
+                                    <input type="checkbox" name="male" id="male" class="form-checkbox" value="male" /> <label for="female">F :</label>
+                                    <input type="checkbox" name="female" id="female" class="form-checkbox" value="female" />
                                 </div>
                             </div>
 
                             <div class="">
-                                <label for="zipcode">Nationalité</label>
-                                <input type="text" name="zipcode" id="zipcode" class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" value="" />
+                                <label for="nationality">Nationalité</label>
+                                <input type="text" name="nationality" id="nationality" class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" value="" />
                             </div>
 
                             <div class="">
-                                <label for="state">Lieu de naissance (commune et département)</label>
+                                <label for="placeofbirth">Lieu de naissance (commune et département)</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input name="placeofbirth" id="placeofbirth" placeholder="" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
                             </div>
 
                             <div class="">
-                                <label for="state">Adresse</label>
+                                <label for="adresse1">Adresse</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input name="adresse1" id="adresse1" placeholder="Adresse" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
                             </div>
 
                             <div class="">
-                                <label for="state">Code Postal</label>
+                                <label for="postal">Code Postal</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input name="postal" id="postal" placeholder="Postal" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
-                                <label for="state">Commune</label>
+                                <label for="commune">Commune</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input name="commune" id="commune" placeholder="Commune" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
                             </div>
 
@@ -96,17 +96,17 @@ require('header.php');
 
 
                             <div class="">
-                                <label for="country">Nom</label>
+                                <label for="responsablenom">Nom</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="country" id="country" placeholder="Nom" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input name="responsablenom" id="responsablenom" placeholder="Nom" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
 
                                 </div>
                             </div>
 
                             <div class="">
-                                <label for="state">Prénoms</label>
+                                <label for="responsableprenom">Prénoms</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input name="responsableprenom" id="responsableprenom" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
                             </div>
 
@@ -115,87 +115,87 @@ require('header.php');
                             <div class="">
 
 
-                                    <label for="billing_same" class="ml-2">Résponsable légal : </label>
-                                <input type="checkbox" name="billing_same" id="billing_same" class="form-checkbox" />
-                                <label>Pere</label>
-                                    <input type="checkbox" name="billing_same" id="billing_same" class="form-checkbox" /> <label>Mere</label>
-                                    <input type="checkbox" name="billing_same" id="billing_same" class="form-checkbox" /><label> Tuteur</label>
-                                    <input type="checkbox" name="billing_same" id="billing_same" class="form-checkbox" /><label>Autre</label>
-                                <input type="text" name="zipcode" id="zipcode" class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" value="" />
+                                    <label class="ml-2">Résponsable légal : </label>
+                                <input type="checkbox" name="pere" id="pere" class="form-checkbox" />
+                                <label for="pere">Pere</label>
+                                    <input type="checkbox" name="mere" id="mere" class="form-checkbox" /> <label for="mere">Mere</label>
+                                    <input type="checkbox" name="tuteur" id="tuteur" class="form-checkbox" /><label for="tuteur"> Tuteur</label>
+                                    <input type="checkbox" name="autre" id="autre" class="form-checkbox" /><label for="autre">Autre</label>
+                                <input type="text" name="autre" id="autre" class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" value="" />
 
                             </div>
 
                             <div class="">
                                 <div class="flex items-center"
-                                <label>Profession</label>
-                                <input type="text" name="" id="" class="transition-all flex items-center mx-1 h-10 border mt-1 rounded px-4 w-3/6 bg-gray-50" value="" />
+                                <label for="responsablepro">Profession</label>
+                                <input type="text" name="responsalblepro" id="responsablepro" class="transition-all flex items-center mx-1 h-10 border mt-1 rounded px-4 w-3/6 bg-gray-50" value="" />
 
 
 
-                                <label for="state">Situation familiale</label>
+                                <label for="situationfamille">Situation familiale</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1 w-3/6">
-                                    <input name="state" id="state" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input name="situationfamille" id="situationfamille" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
                             </div></div>
 
                             <div class="">
-                                <label for="state">Adresse</label>
+                                <label for="adresse2">Adresse</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input name="adresse2" id="adresse2" placeholder="adresse" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
                             </div>
 
                             <div class="">
-                                <label for="state">Code Postal</label>
+                                <label for="postal2">Code Postal</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input type="" name="postal2" id="postal2" placeholder="Code Postal" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
 
                             </div>
 
                             <div>
-                                <label for="state">Commune</label>
+                                <label for="responsablecommune">Commune</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input name="responsablecommune" id="responsablecommune" type="text" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
 
                             </div>
                             <div>
-                                <label for="state">Téléphone fixe</label>
+                                <label for="phonefix">Téléphone fixe</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
-                                </div>
-
-                            </div>
-
-                            <div>
-                                <label for="state">Téléphone portable</label>
-                                <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input type="tel" name="phonefix" id="phonefix" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
 
                             </div>
 
                             <div>
-                                <label for="state">Téléphone professionnel</label>
+                                <label for="portable">Téléphone portable</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input type="tel" name="portable" id="portable" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
 
                             </div>
 
                             <div>
-                                <label for="state">Courriel</label>
+                                <label for="telephonepro">Téléphone professionnel</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input type="tel" name="telephonepro" id="telephonepro" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
 
                             </div>
 
                             <div>
-                                <label for="state">A appeler en cas d'urgence (indiquer nom,prenom,numéro de téléphone si différente du responsable légal et si cette personne est autorisée a recuperer l'enfant)</label>
+                                <label for="email">Courriel</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input name="state" id="state" placeholder="Prénoms" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input type="email" name="email" id="email" placeholder="Votre email" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <label for="urgence">A appeler en cas d'urgence (indiquer nom,prenom,numéro de téléphone si différente du responsable légal et si cette personne est autorisée a recuperer l'enfant)</label>
+                                <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
+                                    <input name="urgence" id="urgence" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
                                 </div>
 
                             </div>
@@ -211,7 +211,7 @@ require('header.php');
 
                             <div class=" text-right">
                                 <div class="inline-flex items-end">
-                                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+                                    <button name="sendStudent" type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Envoyer</button>
                                 </div>
                             </div>
 
