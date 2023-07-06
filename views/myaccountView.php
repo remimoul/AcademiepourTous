@@ -2,11 +2,12 @@
 require_once('header.php');
 require_once('../models/oneUsersViewModel.php');
 require_once('../models/reservationModel.php');
+require_once ('../models/formStudentModel.php');
 
 
 foreach ($users as $row) {
     ?>
-    <h1 class=" text-left my-12 mx-12 text-4xl mx-10 font-bold navbar text-white shadow-xl w-[35%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-15 text-white"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <h1 class=" text-left my-12 mx-12 text-4xl mx-10 font-bold navbar text-white shadow-xl w-[90%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-15 text-white"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>Bienvenue <?php echo $row['prenom'] ?></h1>
 <h2 class="text-center text-2xl font-bold my-3 text-red-500">Informations du compte</h2>
@@ -77,13 +78,51 @@ foreach ($users as $row) {
 
 
 
-    <h1 class=" text-left my-12 mx-12 text-4xl mx-10 font-bold navbar text-white shadow-xl w-[35%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-20 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="7" r="4" />  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>Elèves</h1>
+    <h1 class=" text-left my-12 mx-12 text-4xl mx-10 font-bold navbar text-white shadow-xl w-[90%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-20 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="7" r="4" />  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>Elèves</h1>
 
-    <a href="views/studentRegistrationFormView.php">Veuillez remplir le formulaire d'inscription</a>
+<!--    <a href="views/studentRegistrationFormView.php">Veuillez remplir le formulaire d'inscription</a>-->
+
+<!--    <a href="studentRegistrationFormController/addOneStudent">Veuillez remplir le formulaire d'inscription</a>-->
+
+
+<?php
+if(empty($resultsform)){
+    echo "<a href='studentRegistrationFormController/addOneStudent'>Veuillez remplir le formulaire d'inscription</a>";
+} else {
+
+    echo '<div class="flex justify-center">';
+    foreach ($resultsform as $resultsformusers){
+
+        echo '<div class="items-center block max-w-[22rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">';
+        echo '<div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">';
+        echo '<img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg" alt="" />';
+        echo '<a href="#!">';
+        echo '<div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>';
+        echo '</a>';
+        echo '</div>';
+        echo '<div class="p-6">';
+        echo "<h5 class='mb-2 text-4xl font-medium leading-tight text-neutral-800 dark:text-neutral-50'> $resultsformusers[name_student] $resultsformusers[lastname_student] </h5>";
+        echo "<p class='mb-4 text-base text-neutral-600 dark:text-neutral-200'>Année Scolaire : $resultsformusers[annee_scolaire] </p>";
+        echo "<p class='mb-4 text-base text-neutral-600 dark:text-neutral-200'>Niveau : $resultsformusers[niveau] </p>";
+        echo "<p class='mb-4 text-base text-neutral-600 dark:text-neutral-200'>Etablissement : $resultsformusers[etablissement] </p>";
+        echo "<p class='mb-4 text-base text-neutral-600 dark:text-neutral-200'>Classe : $resultsformusers[classe] </p>";
+        echo "<p class='mb-4 text-base text-neutral-600 dark:text-neutral-200'>Sexe : $resultsformusers[sexe] </p>";
+        echo '</div>';
+        echo '</div>';
+
+
+    }
+    echo '</div>';
+}
+
+?>
+
+
+    <h1 class=" text-left my-12 mx-12 text-4xl mx-10 font-bold navbar text-white shadow-xl w-[90%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-20 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="7" r="4" />  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>Responsables de l'élève</h1>
 
 
 
-    <h1 class=" text-left my-12 mx-12 text-4xl mx-10 font-bold navbar text-white shadow-xl w-[35%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-20 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />  <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />  <circle cx="15" cy="9" r="1"  /></svg>Mes reservations</h1>
+    <h1 class=" text-left my-12 mx-12 text-4xl mx-10 font-bold navbar text-white shadow-xl w-[90%] mx-[5%] px-4 py-4 flex items-center"><svg class="h-20 w-20 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />  <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />  <circle cx="15" cy="9" r="1"  /></svg>Mes reservations</h1>
 
 <?php
 
@@ -93,9 +132,7 @@ require_once '../controllers/deleteController.php';
 if (empty($reservation)){
     echo"<h1 class='text-3xl font-bold text-center my-12'>Aucune réservation enregistré</h1>";
 }else {
-
-    echo "<h1 class='text-6xl font-bold text-center my-12'>Mes réservations</h1>";
-
+    
     if (isset($results)) {
 
         echo "<div class='relative overflow-x-auto sm:rounded-lg flex justify-center items-center my-10'>";

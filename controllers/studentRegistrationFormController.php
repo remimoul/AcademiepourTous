@@ -32,11 +32,16 @@ if (isset($_POST['sendStudent'])){
           ,$_POST['mail'],$_POST['urgent']
       );
 
-      require_once('views/confirmRegistrationView.php');
+
 
   }
 
+    header('Location:../views/confirmRegistrationView.php');
+    exit();
 
 }
+
+require_once('views/studentRegistrationFormView.php');
+
 
 }

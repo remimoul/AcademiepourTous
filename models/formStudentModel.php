@@ -1,10 +1,26 @@
 <?php
 
-require_once('models/database.php');
+
+
+
+
+
+    if (isset($_SESSION['usersId'])) {
+        $bddPDO = connexionBDD();
+        $userid = $_SESSION['usersId'];
+        $requetes = "SELECT * FROM form_student WHERE usersId = $userid";
+        $results = $bddPDO->query($requetes);
+        $resultsform = $results->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+
+
 
 
 function addFormStudent($usersId,$annee_scolaire,$niveau,$etablissement,$classe,$name_student,$lastname_student,$sexe,$nationalite,$lieu,$adresse_student,$postal_student,$commune_student,$nom_resp,$prenom_resp,$pere,$mere,$tuteur,$autre,$profession,$situation,$adresse_resp,$postal_resp,$commune_resp,$phone,$mobile,$mobilepro,$mail,$urgent){
-    $bddPDO=connexionBDD();
+    require_once('models/database.php');
+        $bddPDO=connexionBDD();
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
