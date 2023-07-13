@@ -95,8 +95,8 @@ if(empty($resultsform)){
 
         echo '<div class="items-center block max-w-[22rem] rounded-lg shadow-2xl">';
         echo '<div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">';
-        echo '<img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"/>';
-        echo '<a href="#!">';
+        echo "<img class='rounded-t-lg' src='$resultsformusers[photoeleve]' width='280'/>";
+//        echo '<a href="#!">';
         echo '<div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>';
         echo '</a>';
         echo '</div>';

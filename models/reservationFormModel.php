@@ -7,6 +7,7 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
+
 function addCourses($usersId,$coursesId,$reservationDate)
 {
 // Connexion à la base de données

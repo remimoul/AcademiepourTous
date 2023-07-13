@@ -15,7 +15,7 @@ if (isset($_POST['sendStudent'])){
     }
 
 
-    if (!empty($_POST['annee_scolaire'])&& !empty($_POST['niveau']) && !empty($_POST['etablissement']) &&!empty($_POST['classe']) &&!empty($_POST['name_student'])
+    if (!empty($_FILES['photoeleve'])&& !empty($_POST['annee_scolaire'])&& !empty($_POST['niveau']) && !empty($_POST['etablissement']) &&!empty($_POST['classe']) &&!empty($_POST['name_student'])
       &&!empty($_POST['lastname_student']) &&!empty($_POST['sexe']) &&!empty($_POST['nationalite']) &&!empty($_POST['lieu']) &&!empty($_POST['adresse_student'])
       &&!empty($_POST['postal_student']) &&!empty($_POST['commune_student'])&&!empty($_POST['nom_resp'])&&!empty($_POST['prenom_resp'])&&!empty($_POST['pere'])
       &&!empty($_POST['mere']) &&!empty($_POST['tuteur'])&&!empty($_POST['autre'])&&!empty($_POST['profession'])&&!empty($_POST['situation'])&&!empty($_POST['adresse_resp'])
@@ -25,7 +25,7 @@ if (isset($_POST['sendStudent'])){
     echo "Veuillez remplir les informations";
 
   }else{
-      addFormStudent($userId,$_POST['annee_scolaire'],$_POST['niveau'],$_POST['etablissement'],$_POST['classe'],$_POST['name_student'],$_POST['lastname_student'],
+      addFormStudent($userId,$_FILES['photoeleve'],$_POST['annee_scolaire'],$_POST['niveau'],$_POST['etablissement'],$_POST['classe'],$_POST['name_student'],$_POST['lastname_student'],
           $_POST['sexe'],$_POST['nationalite'],$_POST['lieu'],$_POST['adresse_student'],$_POST['postal_student']
           ,$_POST['commune_student'],$_POST['nom_resp'],$_POST['prenom_resp'],$pere,$mere,$tuteur,$autre,$_POST['profession'],
           $_POST['situation'],$_POST['adresse_resp'],$_POST['postal_resp'],$_POST['commune_resp'],$_POST['phone'],$_POST['mobile'],$_POST['mobilepro']

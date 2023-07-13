@@ -1,9 +1,16 @@
 <?php
 
 require('header.php');
+
 ?>
 
-
+<?php
+if (isset($_FILES["photoeleve"]) && $_FILES["photoeleve"]["error"] == UPLOAD_ERR_OK && $_FILES["photoeleve"]["size"] > 2097152) {
+    // Si la taille du fichier dépasse 2 Mo, affichez un message d'erreur
+    echo '<p class="text-red-500">La taille de l\'image doit être inférieure à 2 Mo.</p>';
+    echo "<script>document.getElementById('sendStudent').disabled = true;</script>";
+}
+?>
 <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
     <div class="container max-w-screen-lg mx-auto">
         <div>
@@ -11,7 +18,15 @@ require('header.php');
 
             <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
 
-                    <form method="post" action="studentRegistrationFormController/addOneStudent" class="lg:col-auto">
+                    <form method="post" action="studentRegistrationFormController/addOneStudent" enctype="multipart/form-data" class="lg:col-auto">
+
+                        <div class="grid gap-4 gap-y-2 text-sm">
+                            <div class="">
+                                <label for="photoeleve">Photo d'identité de l'élève (max 2Mo)</label>
+                                <input type="hidden" name="MAX_FILE_SIZE" value="2097152" /> <!-- 2 Mo en octets -->
+                                <input type="file" name="photoeleve" id="photoeleve" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" accept="image/jpeg" required>
+
+                            </div>
 
                         <div class="grid gap-4 gap-y-2 text-sm">
                             <div class="">
@@ -69,7 +84,7 @@ require('header.php');
                             </div>
 
                             <div class="">
-                                <label for="placeofbirth">Lieu de naissance (commune et département)</label>
+                                <label for="placeofbirth">Date de naissance (commune et département)</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
                                     <input name="lieu" id="placeofbirth" placeholder="" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" required />
                                 </div>
