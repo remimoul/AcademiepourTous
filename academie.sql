@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 04 juil. 2023 à 17:10
--- Version du serveur : 10.4.27-MariaDB
--- Version de PHP : 8.2.0
+-- Généré le : jeu. 13 juil. 2023 à 13:52
+-- Version du serveur : 10.4.28-MariaDB
+-- Version de PHP : 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,12 +54,15 @@ INSERT INTO `courses` (`idCourses`, `coursesCode`, `coursesTitle`, `coursesType`
 
 CREATE TABLE `form_student` (
   `id` int(11) NOT NULL,
+  `usersId` int(11) NOT NULL,
+  `photoeleve` varchar(255) DEFAULT NULL,
+  `annee_scolaire` varchar(25) NOT NULL,
   `niveau` varchar(25) NOT NULL,
   `etablissement` varchar(255) NOT NULL,
   `classe` varchar(255) NOT NULL,
   `name_student` varchar(25) NOT NULL,
   `lastname_student` varchar(25) NOT NULL,
-  `sexe` varchar(25) NOT NULL,
+  `sexe` varchar(25) DEFAULT NULL,
   `nationalite` varchar(255) NOT NULL,
   `lieu` varchar(255) NOT NULL,
   `adresse_student` varchar(255) NOT NULL,
@@ -87,8 +90,9 @@ CREATE TABLE `form_student` (
 -- Déchargement des données de la table `form_student`
 --
 
-INSERT INTO `form_student` (`id`, `niveau`, `etablissement`, `classe`, `name_student`, `lastname_student`, `sexe`, `nationalite`, `lieu`, `adresse_student`, `postal_student`, `commune_student`, `nom_resp`, `prenom_resp`, `pere`, `mere`, `tuteur`, `autre`, `profession`, `situation`, `adresse_resp`, `postal_resp`, `commune_resp`, `phone`, `mobile`, `mobilepro`, `mail`, `urgent`) VALUES
-(1, '2023', 'daniel sorano', 'CM2', 'remi', 'remi', 'm', 'française', 'france', '18 rue goubet', '75019', 'paris', 'alex', 'alex', 'pere', 'mere', '', '', 'vendeur', 'marié', '18 rue goubet', '75019', 'paris', 912345687, 643984587, 794940094, 'test@gmail.com', '');
+INSERT INTO `form_student` (`id`, `usersId`, `photoeleve`, `annee_scolaire`, `niveau`, `etablissement`, `classe`, `name_student`, `lastname_student`, `sexe`, `nationalite`, `lieu`, `adresse_student`, `postal_student`, `commune_student`, `nom_resp`, `prenom_resp`, `pere`, `mere`, `tuteur`, `autre`, `profession`, `situation`, `adresse_resp`, `postal_resp`, `commune_resp`, `phone`, `mobile`, `mobilepro`, `mail`, `urgent`) VALUES
+(75, 16, './assets/photoid/16/identite-elisa-korpak-ucl-2021.jpg', '2023', '5EME', 'daniel sorano', '6eme', 'momo', 'momo', 'female', 'français', 'france', '23 rue du dodo', '93200', 'saint denis', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, '', ''),
+(79, 17, './assets/photoid/17/identite-elisa-korpak-ucl-2021.jpg', '2023', '5EME', 'daniel sorano', '6eme', 'yyy', 'yyy', 'female', 'yy', '22/03/1993', '23 rue du dodo', '93200', 'saint denis', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -108,7 +112,10 @@ CREATE TABLE `reservation` (
 --
 
 INSERT INTO `reservation` (`id`, `usersId`, `coursesId`, `reservationDate`) VALUES
-(5, 15, 5, '2023-06-14');
+(5, 15, 5, '2023-06-14'),
+(127, 17, 2, '2023-07-26'),
+(128, 17, 2, '2023-07-05'),
+(129, 17, 3, '2023-07-04');
 
 -- --------------------------------------------------------
 
@@ -150,7 +157,8 @@ ALTER TABLE `courses`
 -- Index pour la table `form_student`
 --
 ALTER TABLE `form_student`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `usersId` (`usersId`);
 
 --
 -- Index pour la table `reservation`
@@ -180,13 +188,13 @@ ALTER TABLE `courses`
 -- AUTO_INCREMENT pour la table `form_student`
 --
 ALTER TABLE `form_student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
 -- AUTO_INCREMENT pour la table `users`
@@ -197,6 +205,12 @@ ALTER TABLE `users`
 --
 -- Contraintes pour les tables déchargées
 --
+
+--
+-- Contraintes pour la table `form_student`
+--
+ALTER TABLE `form_student`
+  ADD CONSTRAINT `form_student_ibfk_1` FOREIGN KEY (`usersId`) REFERENCES `users` (`usersId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `reservation`
